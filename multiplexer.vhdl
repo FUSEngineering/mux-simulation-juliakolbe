@@ -8,8 +8,9 @@ end mux;
 architecture rtl of mux is
 begin
   --  This multiplexer architecture contains one concurrent assignment.
-  -- correct line below
-  C <= (a and not(s)) or (b and s);
+  -- correct line C <= (a and not(s)) or (b and s);
+  -- broken line below 
+  C <= (a and not(s)) or (not(b) and s);
   
 end rtl;
 
